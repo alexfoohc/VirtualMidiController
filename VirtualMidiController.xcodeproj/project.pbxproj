@@ -11,7 +11,21 @@
 		7D51FBD02BCB7BFE00EBA86C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D51FBCF2BCB7BFE00EBA86C /* ViewController.swift */; };
 		7D51FBD22BCB7BFF00EBA86C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D51FBD12BCB7BFF00EBA86C /* Assets.xcassets */; };
 		7D51FBD52BCB7BFF00EBA86C /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 7D51FBD42BCB7BFF00EBA86C /* Base */; };
+		7D51FBDE2BCB7CD700EBA86C /* MIDIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D51FBDD2BCB7CD700EBA86C /* MIDIManager.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7D51FC172BCB97B900EBA86C /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		7D51FBCA2BCB7BFE00EBA86C /* VirtualMidiController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VirtualMidiController.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -20,6 +34,7 @@
 		7D51FBD12BCB7BFF00EBA86C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D51FBD42BCB7BFF00EBA86C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7D51FBD62BCB7BFF00EBA86C /* VirtualMidiController.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VirtualMidiController.entitlements; sourceTree = "<group>"; };
+		7D51FBDD2BCB7CD700EBA86C /* MIDIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIDIManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +67,7 @@
 		7D51FBCC2BCB7BFE00EBA86C /* VirtualMidiController */ = {
 			isa = PBXGroup;
 			children = (
+				7D51FBDC2BCB7CC000EBA86C /* Utilities */,
 				7D51FBCD2BCB7BFE00EBA86C /* AppDelegate.swift */,
 				7D51FBCF2BCB7BFE00EBA86C /* ViewController.swift */,
 				7D51FBD12BCB7BFF00EBA86C /* Assets.xcassets */,
@@ -59,6 +75,14 @@
 				7D51FBD62BCB7BFF00EBA86C /* VirtualMidiController.entitlements */,
 			);
 			path = VirtualMidiController;
+			sourceTree = "<group>";
+		};
+		7D51FBDC2BCB7CC000EBA86C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				7D51FBDD2BCB7CD700EBA86C /* MIDIManager.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,6 +95,7 @@
 				7D51FBC62BCB7BFE00EBA86C /* Sources */,
 				7D51FBC72BCB7BFE00EBA86C /* Frameworks */,
 				7D51FBC82BCB7BFE00EBA86C /* Resources */,
+				7D51FC172BCB97B900EBA86C /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -133,6 +158,7 @@
 			files = (
 				7D51FBD02BCB7BFE00EBA86C /* ViewController.swift in Sources */,
 				7D51FBCE2BCB7BFE00EBA86C /* AppDelegate.swift in Sources */,
+				7D51FBDE2BCB7CD700EBA86C /* MIDIManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,9 +297,11 @@
 		7D51FBDA2BCB7BFF00EBA86C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = VirtualMidiController/VirtualMidiController.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -290,6 +318,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexhernandez.VirtualMidiController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -298,9 +327,11 @@
 		7D51FBDB2BCB7BFF00EBA86C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = VirtualMidiController/VirtualMidiController.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -317,6 +348,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexhernandez.VirtualMidiController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
